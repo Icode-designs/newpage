@@ -66,13 +66,15 @@ function Header({ menuOpen, setMenuOPen }) {
             </NavLink>
           </ul>
 
-          <Button
-            $btn_weight="500"
-            $bg="var(--col-10)"
-            onClick={!isLargeScreen ? handleClick : undefined}
-          >
-            Book us Now!
-          </Button>
+          <Link to="/booking">
+            <Button
+              $btn_weight="500"
+              $bg="var(--col-10)"
+              onClick={!isLargeScreen ? handleClick : undefined}
+            >
+              Book us Now!
+            </Button>
+          </Link>
         </MenuWrapper>
 
         <button className="menu_btn" onClick={handleClick}>

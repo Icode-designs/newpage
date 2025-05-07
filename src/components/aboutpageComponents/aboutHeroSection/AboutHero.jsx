@@ -5,6 +5,7 @@ import { FaSmile } from "react-icons/fa";
 import { GiVacuumCleaner } from "react-icons/gi";
 import BigHeading from "components/sharedComponents/bigHeading/BigHeading";
 import Button from "components/sharedComponents/customButton/Button";
+import { NavLink } from "react-router-dom";
 
 function AboutHero() {
   return (
@@ -21,8 +22,14 @@ function AboutHero() {
             </p>
 
             <div>
-              <Button $bg="var(--col-10)">Get Started Now</Button>
-              <Button $border="1px solid var(--col-10)">Get Started Now</Button>
+              <NavLink to="/booking">
+                <Button $bg="var(--col-10)">Get Started Now</Button>
+              </NavLink>
+              <NavLink to="/services">
+                <Button $border="1px solid var(--col-10)">
+                  View all Services
+                </Button>
+              </NavLink>
             </div>
           </article>
 

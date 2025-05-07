@@ -38,11 +38,11 @@ function FindUs() {
           <div>
             <h3>Address</h3>
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=7510,+Brand+Tower,+New+York,+USA"
+              href="https://www.google.com/maps/dir/?api=1&destination=13725+Chadron+Ave.+Appt.+210.+Hawthorne,+California+90250.+USA"
               target="_blank"
               rel="noopener noreferrer"
             >
-              7510, Brand Tower, New York, USA
+              13725 Chadron Ave. Appt. 210. Hawthorne, California 90250. USA
             </a>
           </div>
         </div>

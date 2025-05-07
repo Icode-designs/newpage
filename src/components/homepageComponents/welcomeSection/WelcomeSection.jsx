@@ -5,6 +5,7 @@ import Qualities from "./Qualities";
 import { WelcomeSectionBox } from "./welcomeStyles";
 import BigHeading from "components/sharedComponents/bigHeading/BigHeading";
 import Button from "components/sharedComponents/customButton/Button";
+import { Link } from "react-router-dom";
 
 function WelcomeSection() {
   return (
@@ -28,7 +29,9 @@ function WelcomeSection() {
               return <Qualities quality={data} key={index} />;
             })}
           </ul>
-          <Button $bg="var(--col-10)">Book Us Now!</Button>
+          <Link to="/booking">
+            <Button $bg="var(--col-10)">Book Us Now!</Button>
+          </Link>
         </div>
       </div>
     </WelcomeSectionBox>
