@@ -658,7 +658,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
     color: var(--col-60);
   }
 `;function wi({heading:l,desc:u,...c}){return s.jsxs(b5,{...c,children:[s.jsx("h2",{children:l}),s.jsx("p",{children:u})]})}function I1({text:l,heading:u,desc:c,...o}){return s.jsxs(v5,{...o,children:[s.jsx(Pt,{text:l}),s.jsx(wi,{heading:u,desc:c})]})}function e0({...l}){const u=C.useRef(null),c=()=>{u.current&&u.current.scrollBy({left:-348,behavior:"smooth"})},o=()=>{u.current&&u.current.scrollBy({left:348,behavior:"smooth"})};return s.jsxs(F1,{id:"service-section",...l,children:[s.jsx("button",{className:"arrow-icon icon--left",onClick:c,"aria-label":"Scroll left",children:s.jsx(J1,{})}),s.jsx("button",{className:"arrow-icon icon--right",onClick:o,"aria-label":"Scroll right",children:s.jsx(ji,{})}),s.jsx(I1,{...l,text:"We always provide the best service",heading:"Services",desc:` While we can customize your cleaning plan to suit your needs, most\r
-        clients schedule regular cleaning services.`}),s.jsx(W1,{ref:u,...l,children:Po.map((d,m)=>s.jsx(P1,{data:d,...l},m))})]})}const x5="/assets/welcome_Image1-C8mZ-oqR.jpg",S5=P.section`
+        clients schedule regular cleaning services.`}),s.jsx(W1,{ref:u,...l,children:Po.map((d,m)=>s.jsx(P1,{data:d,...l},m))})]})}const x5="/assets/welcome_image-C8mZ-oqR.jpg",S5=P.section`
   padding: 4.375rem 1.5rem;
 
   > div {

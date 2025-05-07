@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import wlcm_img1 from "assets/welcome_image1.jpg";
+import wlcm_img1 from "assets/welcome_image.jpg";
 import wlcm_img2 from "assets/warehouse_cleaning.jpg";
 
 //welcome section styles
