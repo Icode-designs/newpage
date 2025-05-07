@@ -12,10 +12,6 @@ function ServicesPage() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767px)" });
   const isMediumScreen = useMediaQuery({ query: "(max-width: 1199px)" });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const gridColumn = isSmallScreen
     ? "1fr"
     : isMediumScreen

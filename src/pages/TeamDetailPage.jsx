@@ -26,9 +26,6 @@ const TeampageBox = styled.main`
 
 function TeamDetailPage() {
   const { id } = useParams();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const member = TeamData.find((m) => m.id === parseInt(id));
 

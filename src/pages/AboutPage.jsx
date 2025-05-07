@@ -10,9 +10,6 @@ const AboutpageBox = styled.main`
 `;
 
 function AboutPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <AboutpageBox>
       <AboutHero />

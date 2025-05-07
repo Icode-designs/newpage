@@ -14,9 +14,6 @@ const PackageDetailpageBox = styled.main`
 
 function PackageDetailspage() {
   const { id } = useParams();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const plan = PackagesData.find((x) => x.id == parseInt(id));
 

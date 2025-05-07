@@ -17,9 +17,6 @@ const HomepageBox = styled.main`
 `;
 
 function Homepage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <HomepageBox>
       <Hero />

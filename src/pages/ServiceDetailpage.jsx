@@ -31,7 +31,6 @@ const ServiceDetailspageBox = styled.main`
 `;
 
 function ServiceDetailpage() {
-  window.scrollTo(0, 0);
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767px)" });
 
   const gridColumn = isSmallScreen && "1fr";

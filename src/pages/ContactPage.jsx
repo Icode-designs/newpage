@@ -11,9 +11,6 @@ const ContactpageBox = styled.main`
 `;
 
 function ContactPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <ContactpageBox>
       <ContactSection />

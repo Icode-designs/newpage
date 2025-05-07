@@ -24,9 +24,6 @@ const TeampageBox = styled.main`
   }
 `;
 function TeamPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <TeampageBox>
       <TeampageHero />

@@ -28,6 +28,7 @@ export const BookingFormBox = styled.section`
           outline: none;
           border: 1px solid var(--col-60);
           border-radius: 0.25rem;
+          background-color: transparent;
         }
       }
     }
