@@ -54,6 +54,7 @@ export const PricingBox = styled.section`
       line-height: 120%;
       letter-spacing: 0;
       margin-bottom: 0.75rem;
+      color: var(--col-70);
     }
 
     h1 {
