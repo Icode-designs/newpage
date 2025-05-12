@@ -7,7 +7,7 @@ function PackageOverview({ plan }) {
     <PackageOverviewBox>
       <div>
         <h2>{plan.name}</h2>
-        <BigHeading text="Price is available at request" />
+        <BigHeading>Price is available at request</BigHeading>
       </div>
     </PackageOverviewBox>
   );
