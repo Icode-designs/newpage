@@ -76,7 +76,7 @@ function Footer() {
           <input
             type="hidden"
             name="_next"
-            value="https://newpage-theta.vercel.app/contact"
+            value="https://newpage-theta.vercel.app/"
           ></input>
           <input
             type="text"
