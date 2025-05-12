@@ -73,6 +73,11 @@ function BookingForm() {
       >
         <input type="hidden" name="_subject" value="New cleaning request ✉️" />
         <input type="hidden" name="_template" value="table" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://newpage-theta.vercel.app/contact"
+        ></input>
         <FormFeilds formEntry={formEntry} setFormEntry={setFormEntry} />
         <Checkboxes
           checkedServices={checkedServices}

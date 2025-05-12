@@ -39,6 +39,11 @@ function FormSubmit() {
       <input type="hidden" name="_subject" value="New Contact Message ✉️" />
       <input type="hidden" name="_template" value="table" />
       <input
+        type="hidden"
+        name="_next"
+        value="https://newpage-theta.vercel.app/contact"
+      ></input>
+      <input
         type="text"
         name="name"
         placeholder="Name"
