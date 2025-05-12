@@ -77,7 +77,7 @@ function Footer() {
             type="hidden"
             name="_next"
             value="https://newpage-theta.vercel.app/"
-          ></input>
+          />
           <input
             type="text"
             placeholder="Email goes here"

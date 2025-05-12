@@ -41,8 +41,8 @@ function FormSubmit() {
       <input
         type="hidden"
         name="_next"
-        value="https://newpage-theta.vercel.app/contact"
-      ></input>
+        value="https://newpage-theta.vercel.app/"
+      />
       <input
         type="text"
         name="name"
