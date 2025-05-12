@@ -6,15 +6,17 @@ import { TeamInfoBox } from "./teamStyles";
 import SectionIntro from "components/sharedComponents/sectionIntro/SectionIntro";
 
 function TeamInfo({ ...props }) {
+  const articleDetails = {
+    heading: "Expert Team",
+    desc: "We have professional expert cleaning staff ensuring top-notch cleanliness and hygiene for your space.",
+  };
   return (
     <TeamInfoBox {...props}>
       <div>
         <SectionIntro
           {...props}
           text="Effective Cleaning Requires an Expert Cleaning Team"
-          heading="Expert Team"
-          desc="We have professional expert cleaning staff ensuring top-notch
-              cleanliness and hygiene for your space."
+          articleDetails={articleDetails}
         />
         <ul>
           {TeamData.map((data, index) => {

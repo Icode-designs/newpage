@@ -1,14 +1,18 @@
 import React from "react";
 import { FaQuoteRight } from "react-icons/fa6";
 import { IoIosStar } from "react-icons/io";
-import { TestimonialCardBox } from "./testimonialStyles";
+import {
+  TestimonialCardBox,
+  TestimonialImg,
+  TitleBox,
+} from "./testimonialStyles";
 
 function TestimonialCard({ data }) {
   return (
-    <TestimonialCardBox $img={data.image}>
-      <div className="image"></div>
+    <TestimonialCardBox>
+      <TestimonialImg $img={data.image}></TestimonialImg>
       <article>
-        <div className="titleBox">
+        <TitleBox className="titleBox">
           <div>
             <h3>{data.name}</h3>
             <p>{data.role}</p>
@@ -21,7 +25,7 @@ function TestimonialCard({ data }) {
           <div className="quote-icon">
             <FaQuoteRight size={34} />
           </div>
-        </div>
+        </TitleBox>
         <p>{data.comment}</p>
       </article>
     </TestimonialCardBox>

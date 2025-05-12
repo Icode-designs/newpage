@@ -1,6 +1,6 @@
 import React from "react";
 import { PackagesData } from "utils/data";
-import { PricingBox } from "./pricingStyles";
+import { PackagesContainer, PricingBox } from "./pricingStyles";
 import Package from "./Package";
 
 function Pricing() {
@@ -11,11 +11,11 @@ function Pricing() {
           <p>our pricing</p>
           <h1>Choose From Our Lowest Plans and Prices</h1>
         </article>
-        <div>
+        <PackagesContainer>
           {PackagesData.map((data, index) => {
             return <Package data={data} key={index} />;
           })}
-        </div>
+        </PackagesContainer>
       </div>
     </PricingBox>
   );

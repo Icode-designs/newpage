@@ -1,69 +1,23 @@
 import React from "react";
-import { AboutHeroBox } from "./aboutHeroStyles";
-import janitor from "assets/janitor.png";
-import { FaSmile } from "react-icons/fa";
-import { GiVacuumCleaner } from "react-icons/gi";
-import BigHeading from "components/sharedComponents/bigHeading/BigHeading";
-import Button from "components/sharedComponents/customButton/Button";
-import { NavLink } from "react-router-dom";
+
+//components
+import Achievements from "./Achievements";
+import AboutHeroArticle from "./AboutHeroArticle";
+
+//styles
+import { AboutpageSectionInnerBox } from "../aboutpageGenStyles";
+import { AboutBg, AboutHeroBox } from "./aboutHeroStyles";
 
 function AboutHero() {
   return (
     <AboutHeroBox>
-      <div>
+      <AboutpageSectionInnerBox>
         <div>
-          <div className="about-bg"></div>
-
-          <article>
-            <BigHeading text="About our Company" />
-            <p>
-              Dedicated to Delivering Spotless Spaces with Customized Cleaning
-              Solutions
-            </p>
-
-            <div>
-              <NavLink to="/booking">
-                <Button $bg="var(--col-10)">Get Started Now</Button>
-              </NavLink>
-              <NavLink to="/services">
-                <Button $border="1px solid var(--col-10)">
-                  View all Services
-                </Button>
-              </NavLink>
-            </div>
-          </article>
-
-          <div className="achievements">
-            <div>
-              <div>
-                <FaSmile size={24} color="var(--col-10)" />
-              </div>
-              <div>
-                <h2>1000+</h2>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img src={janitor} alt="janitor-icon" />
-              </div>
-              <div>
-                <h2>1000+</h2>
-                <p>Employees</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <GiVacuumCleaner size={24} color="var(--col-10)" />
-              </div>
-              <div>
-                <h2>1000+</h2>
-                <p>Jobs done</p>
-              </div>
-            </div>
-          </div>
+          <AboutBg></AboutBg>
+          <AboutHeroArticle />
+          <Achievements />
         </div>
-      </div>
+      </AboutpageSectionInnerBox>
     </AboutHeroBox>
   );
 }

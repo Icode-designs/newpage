@@ -1,14 +1,16 @@
 import React from "react";
-import { VideoBox } from "./videoSectionStyles";
 import video from "assets/cleaning_video.mp4";
+
+// styles
+import { VideoBox, VideoContainer } from "./videoSectionStyles";
 
 function VideoSection(customVideo) {
   return (
     <VideoBox>
       <div>
-        <div>
+        <VideoContainer>
           <video src={video} autoPlay loop></video>
-        </div>
+        </VideoContainer>
       </div>
     </VideoBox>
   );

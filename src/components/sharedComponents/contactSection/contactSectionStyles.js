@@ -10,31 +10,14 @@ export const ContactSectionBox = styled.section`
     max-width: 73.125rem;
     margin: 0 auto;
     justify-content: space-between;
-
-    > div {
-      &:nth-of-type(1) {
-        article {
-          margin-bottom: 2.31rem;
-          p {
-            letter-spacing: 0;
-            line-height: 120%;
-
-            &:nth-of-type(2) {
-              color: var(--col-60);
-            }
-          }
-        }
-        @media (min-width: 768px) {
-          order: 2;
-        }
-      }
-    }
   }
 
   @media (min-width: 768px) {
     > div {
       flex-direction: row;
-      align-items: end;
+      align-items: center;
+      gap: 3rem;
+      justify-content: space-between;
       > * {
         max-width: 50%;
       }
@@ -56,6 +39,11 @@ export const FormBox = styled.form`
     outline: none;
   }
 
+  textarea {
+    min-height: 4rem;
+    max-height: 6rem;
+    resize: none;
+  }
   button {
     width: 11.687rem;
     color: var(--col-70);
@@ -64,6 +52,10 @@ export const FormBox = styled.form`
     &:hover {
       background-color: var(--col-30);
     }
+  }
+
+  @media (min-width: 768px) {
+    order: 1;
   }
 `;
 
@@ -116,6 +108,18 @@ export const FindusBox = styled.div`
   }
 
   @media (min-width: 768px) {
-    order: 1;
+    order: 2;
+  }
+`;
+
+export const ContactArticleContainer = styled.div`
+  article {
+    margin-bottom: 2.31rem;
+    p {
+      letter-spacing: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    order: 2;
   }
 `;

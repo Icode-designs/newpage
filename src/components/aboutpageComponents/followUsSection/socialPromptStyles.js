@@ -5,20 +5,8 @@ export const SocialPromptBox = styled.section`
   padding: 4.687rem 1.5rem;
   margin-bottom: 6.375rem;
   > div {
-    max-width: 73.125rem;
-    margin: 0 auto;
     > div {
       margin: 0 auto;
-      &:nth-of-type(1) {
-        background-image: url(${socialPrompt_img});
-        background-position: center;
-        background-size: cover;
-        height: 26.625rem;
-        width: 100%;
-        max-width: 48.3125rem;
-        border-radius: 1.875rem;
-        margin-bottom: 2.5rem;
-      }
 
       &:nth-of-type(2) {
         max-width: 33.25rem;
@@ -66,4 +54,15 @@ export const SocialPromptBox = styled.section`
       }
     }
   }
+`;
+
+export const PromptImage = styled.div`
+  background-image: url(${socialPrompt_img});
+  background-position: center;
+  background-size: cover;
+  height: 26.625rem;
+  width: 100%;
+  max-width: 48.3125rem;
+  border-radius: 1.875rem;
+  margin-bottom: 2.5rem;
 `;

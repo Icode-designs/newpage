@@ -87,16 +87,6 @@ export const ServiceContentBox = styled.div`
     width: ${({ $contentWidth }) => $contentWidth || "20.25rem"};
     height: 30.8125rem;
 
-    .service-image {
-      margin-bottom: 0.96rem;
-      background-image: ${({ $image }) => `url(${$image})`};
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 15.77rem;
-      border-radius: 1.81rem;
-    }
-
     article {
       height: 13.0625rem;
       position: relative;
@@ -148,4 +138,14 @@ export const ServiceContentBox = styled.div`
       }
     }
   }
+`;
+
+export const ServiceImage = styled.div`
+  margin-bottom: 0.96rem;
+  background-image: ${({ $image }) => `url(${$image})`};
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 15.77rem;
+  border-radius: 1.81rem;
 `;

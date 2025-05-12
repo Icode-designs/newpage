@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 //import icons
 import { FaArrowRightLong } from "react-icons/fa6";
-import { ServiceContentBox } from "./servicSectionStyles";
+import { ServiceContentBox, ServiceImage } from "./servicSectionStyles";
 import Button from "components/sharedComponents/customButton/Button";
 import { Link } from "react-router-dom";
 
 function ServiceContent({ data, ...props }) {
   return (
-    <ServiceContentBox {...props} $image={data.image}>
+    <ServiceContentBox {...props}>
       <div>
-        <div className="service-image"></div>
+        <ServiceImage $image={data.image}></ServiceImage>
         <article>
           <h1>{data.name}</h1>
           <p>{data.desc}</p>

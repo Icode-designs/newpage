@@ -1,8 +1,8 @@
 import React from "react";
 import { Bigtext } from "./bigHeadingStyles";
 
-function BigHeading({ text }) {
-  return <Bigtext>{text}</Bigtext>;
+function BigHeading({ children }) {
+  return <Bigtext>{children}</Bigtext>;
 }
 
 export default BigHeading;

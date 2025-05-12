@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import { FaqBox } from "./faqStyles";
-import Article from "components/sharedComponents/article/Article";
 import { useMediaQuery } from "react-responsive";
+
+// icons
 import { FaAngleRight } from "react-icons/fa6";
+
+// data
 import { FaqData } from "utils/data";
+
+// components
+import Article from "components/sharedComponents/article/Article";
+
+// styles
+import { FaqBox, FaqContainer } from "./faqStyles";
 
 function FaqSection() {
   const [toggleState, setToggleState] = useState(null);
@@ -11,22 +19,28 @@ function FaqSection() {
   const headingSize = isLargeScreen ? "2.75rem" : "2.1875rem";
 
   function handleClick(index) {
+    // auto close faq
     setToggleState((prevToggleState) =>
       prevToggleState === index ? null : index
     );
   }
 
+  const articleDetails = {
+    heading: "Frequently asked questions",
+    desc: "We provide comprehensive cleaning services tailored to your needs. From residential cleaning  services",
+  };
+
+  const customStyles = {
+    $headingSize: { headingSize },
+    $headingCol: "var(--col-30)",
+  };
+
   return (
     <FaqBox>
       <div>
-        <Article
-          heading="Frequently asked questions"
-          desc="We provide comprehensive cleaning services tailored to your needs. From residential cleaning  services"
-          $headingSize={headingSize}
-          $headingCol="var(--col-30)"
-        />
+        <Article articleDetails={articleDetails} props={customStyles} />
 
-        <div id="faq">
+        <FaqContainer>
           {FaqData.map((data, index) => {
             return (
               <details
@@ -47,7 +61,7 @@ function FaqSection() {
               </details>
             );
           })}
-        </div>
+        </FaqContainer>
       </div>
     </FaqBox>
   );

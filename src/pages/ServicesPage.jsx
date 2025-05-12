@@ -30,7 +30,7 @@ function ServicesPage() {
         $topBorder="1px solid var(--col-50)"
         $topPadding="2.5rem"
         $headingWidth="fit-content"
-        $headingMargin="2.5rem auto"
+        $headingMargin="0 auto"
         $contentWidth="100%"
       />
     </ServicespageBox>

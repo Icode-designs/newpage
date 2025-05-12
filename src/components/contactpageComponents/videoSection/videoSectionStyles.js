@@ -5,15 +5,16 @@ export const VideoBox = styled.section`
   > div {
     max-width: 73.125rem;
     margin: 0 auto;
-    > div {
-      margin: 0 auto;
-      max-width: 60.625rem;
-      height: fit-content;
-      video {
-        border-radius: 1.875rem;
-        width: 100%;
-        height: auto;
-      }
-    }
+  }
+`;
+
+export const VideoContainer = styled.section`
+  margin: 0 auto;
+  max-width: 60.625rem;
+  height: fit-content;
+  video {
+    border-radius: 1.875rem;
+    width: 100%;
+    height: auto;
   }
 `;

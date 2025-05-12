@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 //customizable article
 export const ArticleBox = styled.article`
+  margin: 0;
   margin-bottom: 2.5rem;
   h2 {
     font-size: ${({ $headingSize }) => $headingSize || "1.25rem"};
@@ -17,6 +18,6 @@ export const ArticleBox = styled.article`
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.125px;
-    color: var(--col-60);
+    color: ${({ $descCol }) => $descCol || "var(--col-60)"};
   }
 `;

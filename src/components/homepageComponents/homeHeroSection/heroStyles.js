@@ -40,6 +40,7 @@ export const HeroContentBox = styled.div`
   margin-left: 0;
   max-width: 38.125rem;
   p {
+    color: inherit;
     &:nth-of-type(1) {
       font-size: 1.25rem;
       line-height: 120%;
@@ -49,12 +50,9 @@ export const HeroContentBox = styled.div`
       font-size: 1.125rem;
       line-height: 1.875rem;
       margin-bottom: 1.25rem;
-      letter-spacing: 0;
     }
   }
-  h1 {
-    font-weight: bold;
-    font-size: 2.5rem;
+  h2 {
     line-height: 115%;
     letter-spacing: 0;
     margin-bottom: 1.25rem;

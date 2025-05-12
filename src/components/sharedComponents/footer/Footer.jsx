@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FooterBox } from "./footerStyles";
 import Logo from "../logo/Logo";
 import { Link } from "react-router-dom";
 import Button from "../customButton/Button";
 
 function Footer() {
+  const userEmail = useRef();
+  const [value, setValue] = useState("");
+
+  function handleChange(e) {
+    setValue(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(value)) {
+      alert("Please enter a valid email address");
+      setValue("");
+      return;
+    }
+
+    userEmail.current.submit();
+    setValue("");
+  }
+
   return (
     <FooterBox>
       <div>
@@ -38,10 +60,29 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <form action="">
+        <form
+          action="https://formsubmit.co/17f96291fc40b287f2acdc4eab34e02f"
+          method="POST"
+          ref={userEmail}
+          onSubmit={handleSubmit}
+        >
           <h2>Newsletter</h2>
-          <input type="text" placeholder="Email goes here" />
-          <Button $bg="var(--col-10)">send</Button>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New subscription to News Letter ✉️"
+          />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="text"
+            placeholder="Email goes here"
+            name="email"
+            value={value}
+            onChange={handleChange}
+          />
+          <Button $bg="var(--col-10)" type="submit">
+            send
+          </Button>
         </form>
       </div>
       <div className="copyright">

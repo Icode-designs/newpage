@@ -35,6 +35,12 @@ export const GlobalStyles = createGlobalStyle`
     list-style-type: none;
   }
 
+  p{
+     color: var(--col-60);
+     font-weight: 400;
+     line-height: 1.5rem;
+  }
+
   button{
   background: none;
   border: none;

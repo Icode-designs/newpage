@@ -20,41 +20,10 @@ export const TestimonialsBox = styled.section`
         color: var(--col-60);
         margin-bottom: 3.25rem;
       }
-
-      div {
-        display: flex;
-        gap: 0.75rem;
-      }
-
-      button {
-        height: 3.5rem;
-        width: 3.5rem;
-        font-size: 1.5rem;
-        border-radius: 0.625rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all ease 0.5s;
-        border: 1px solid var(--col-30);
-        color: var(--col-30);
-
-        &:hover {
-          background-color: var(--col-30);
-          color: var(--col-70);
-        }
-      }
     }
   }
   @media (min-width: 768px) {
     text-align: center;
-
-    > div {
-      > article {
-        div {
-          justify-self: center;
-        }
-      }
-    }
   }
 
   @media (min-width: 1200px) {
@@ -92,11 +61,6 @@ export const ScrollBox = styled.div`
     scroll-snap-align: start;
     flex-shrink: 0; /* keep each card at its own width */
   }
-
-  @media (min-width: 768px) {
-    /* margin: 0 7.5rem;
-    gap: 7.5rem; */
-  }
 `;
 
 //testimonial card styles
@@ -111,22 +75,7 @@ export const TestimonialCardBox = styled.div`
   max-width: 37.5rem;
 
   p {
-    color: var(--col-60);
     letter-spacing: 1%;
-    line-height: 1.5rem;
-  }
-
-  .image {
-    background-image: ${({ $img }) => `url(${$img})`};
-    background-size: cover;
-    background-position: center;
-    height: 6.5rem;
-    width: 4.56rem;
-    border-radius: 0.625rem;
-    @media (min-width: 768px) {
-      height: 15.25rem;
-      width: 10.625rem;
-    }
   }
 
   article {
@@ -134,16 +83,6 @@ export const TestimonialCardBox = styled.div`
   }
 
   .titleBox {
-    display: flex;
-    gap: 1rem;
-
-    h3 {
-      font-size: 1.25rem;
-      line-height: 1.2rem;
-      font-weight: 500;
-      letter-spacing: 0;
-      text-transform: capitalize;
-    }
   }
 
   .quote-icon {
@@ -152,5 +91,58 @@ export const TestimonialCardBox = styled.div`
     border-radius: 0.125rem;
     color: var(--col-70);
     height: fit-content;
+  }
+`;
+
+export const TestimonialImg = styled.div`
+  background-image: ${({ $img }) => `url(${$img})`};
+  background-size: cover;
+  background-position: center;
+  height: 6.5rem;
+  width: 4.56rem;
+  border-radius: 0.625rem;
+  @media (min-width: 768px) {
+    height: 15.25rem;
+    width: 10.625rem;
+  }
+`;
+export const TitleBox = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+`;
+
+export const TestimonialBtnContainer = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  justify-self: center;
+
+  button {
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 1.5rem;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    border: 1px solid var(--col-30);
+    color: var(--col-30);
+
+    &:hover {
+      background-color: var(--col-30);
+      color: var(--col-70);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    justify-self: left;
   }
 `;

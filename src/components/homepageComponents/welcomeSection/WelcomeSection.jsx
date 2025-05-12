@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { QualitiesData } from "utils/data";
 import Qualities from "./Qualities";
-import { WelcomeSectionBox } from "./welcomeStyles";
+import {
+  WelcomeArticleContainer,
+  WelcomeImageContainer,
+  WelcomeSectionBox,
+} from "./welcomeStyles";
 import BigHeading from "components/sharedComponents/bigHeading/BigHeading";
 import Button from "components/sharedComponents/customButton/Button";
 import { Link } from "react-router-dom";
@@ -11,13 +15,13 @@ function WelcomeSection() {
   return (
     <WelcomeSectionBox>
       <div>
-        <div>
+        <WelcomeImageContainer>
           <div></div>
           <div></div>
-        </div>
-        <div>
+        </WelcomeImageContainer>
+        <WelcomeArticleContainer>
           <article>
-            <BigHeading text="Welcome To Our NewPage Cleaning Company!" />
+            <BigHeading>Welcome To Our NewPage Cleaning Company!</BigHeading>
             <p>
               We make your space shine! Professional and reliable cleaning
               service company providing top-notch solutions for homes and
@@ -32,7 +36,7 @@ function WelcomeSection() {
           <Link to="/booking">
             <Button $bg="var(--col-10)">Book Us Now!</Button>
           </Link>
-        </div>
+        </WelcomeArticleContainer>
       </div>
     </WelcomeSectionBox>
   );

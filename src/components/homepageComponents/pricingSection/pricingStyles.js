@@ -41,20 +41,6 @@ export const PricingBox = styled.section`
     z-index: 20;
     margin: 0 auto;
     max-width: 73.125rem;
-
-    > div {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 2.5rem;
-
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (min-width: 1200px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
   }
 
   article {
@@ -89,6 +75,8 @@ export const PackageBox = styled.div`
   border-radius: 1.25rem;
   background-color: var(--col-70);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 
   h2 {
     color: var(--col-40);
@@ -127,6 +115,8 @@ export const PackageBox = styled.div`
   a {
     color: unset;
     text-decoration: none;
+    margin-top: auto;
+    margin-bottom: 0;
     button {
       display: flex;
       justify-content: center;
@@ -139,5 +129,19 @@ export const PackageBox = styled.div`
         color: var(--col-70);
       }
     }
+  }
+`;
+
+export const PackagesContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;

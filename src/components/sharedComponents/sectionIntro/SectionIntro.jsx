@@ -6,11 +6,11 @@ import Article from "../article/Article";
 
 //section intro styles
 
-function SectionIntro({ text, heading, desc, ...props }) {
+function SectionIntro({ text, articleDetails, ...props }) {
   return (
     <SectionIntroBox {...props}>
-      <BigHeading text={text} />
-      <Article heading={heading} desc={desc} />
+      <BigHeading>{text}</BigHeading>
+      <Article articleDetails={articleDetails} />
     </SectionIntroBox>
   );
 }

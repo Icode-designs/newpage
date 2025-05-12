@@ -26,6 +26,15 @@ function ServicesSection({ ...props }) {
     }
   };
 
+  const articleDetails = {
+    heading: "Services",
+    desc: " While we can customize your cleaning plan to suit your needs, most schedule regular cleaning services.",
+  };
+
+  const bigText = "We always provide the best service";
+
+  const border = "1px solid var(--col-50)";
+
   return (
     <ServiceSectionBox id="service-section" {...props}>
       <button
@@ -42,15 +51,15 @@ function ServicesSection({ ...props }) {
       >
         <FaArrowRightLong />
       </button>
-      <SectionIntro
-        {...props}
-        text="We always provide the best service"
-        heading="Services"
-        desc=" While we can customize your cleaning plan to suit your needs, most
-        clients schedule regular cleaning services."
-      />
 
-      <ScrollContainer ref={scrollContainerRef} {...props}>
+      <SectionIntro {...props} articleDetails={articleDetails} text={bigText} />
+
+      <ScrollContainer
+        ref={scrollContainerRef}
+        $topBorder={border}
+        $topPadding="2.5rem"
+        {...props}
+      >
         {/* map through service section data and return service content for each data */}
         {ServiceSectionData.map((data, index) => (
           <ServiceContent data={data} key={index} {...props} />

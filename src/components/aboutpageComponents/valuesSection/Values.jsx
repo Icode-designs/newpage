@@ -1,6 +1,8 @@
 import React from "react";
-import { ValueBox } from "./ourValuesStyles";
 import { useMediaQuery } from "react-responsive";
+
+// styles
+import { ValueBox } from "./ourValuesStyles";
 
 function Values({ data }) {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 768px)" });
