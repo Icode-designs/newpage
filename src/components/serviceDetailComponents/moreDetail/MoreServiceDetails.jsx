@@ -3,6 +3,7 @@ import { MoreServiceDetBox } from "./moreServiceDetStylex";
 import DetailsUL from "./DetailsUL";
 import Button from "components/sharedComponents/customButton/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function MoreServiceDetails({ service }) {
   const detailsList = service.includes.includesDetails;
@@ -41,9 +42,11 @@ function MoreServiceDetails({ service }) {
             <p>
               Schedule: <span>{service.availability}</span>
             </p>
-            <Button $border="1px solid var(--col-60)" $btn_Weight="400">
-              Book Now <FaArrowRightLong className="icon" />
-            </Button>
+            <Link to="/booking">
+              <Button $border="1px solid var(--col-60)" $btn_Weight="400">
+                Book Now <FaArrowRightLong className="icon" />
+              </Button>
+            </Link>
           </article>
         </div>
       </div>
