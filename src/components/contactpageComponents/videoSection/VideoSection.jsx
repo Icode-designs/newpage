@@ -4,7 +4,7 @@ import video from "assets/cleaning_video.mp4";
 // styles
 import { VideoBox, VideoContainer } from "./videoSectionStyles";
 
-function VideoSection(customVideo) {
+function VideoSection() {
   return (
     <VideoBox>
       <div>

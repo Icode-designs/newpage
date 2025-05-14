@@ -76,8 +76,7 @@ export const PackageBox = styled.div`
   border-radius: 1.25rem;
   background-color: var(--col-70);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   h2 {
     color: var(--col-40);
@@ -114,21 +113,9 @@ export const PackageBox = styled.div`
   }
 
   a {
-    color: unset;
-    text-decoration: none;
-    margin-top: auto;
-    margin-bottom: 0;
     button {
-      display: flex;
-      justify-content: center;
+      align-self: end;
       justify-self: center;
-      align-items: center;
-      transition: all ease 0.5s;
-
-      &:hover {
-        background-color: var(--col-30);
-        color: var(--col-70);
-      }
     }
   }
 `;

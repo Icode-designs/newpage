@@ -85,10 +85,10 @@ export const ServiceSectionBox = styled.section`
 export const ServiceContentBox = styled.div`
   > div {
     width: ${({ $contentWidth }) => $contentWidth || "20.25rem"};
-    height: 30.8125rem;
+    display: grid;
 
     article {
-      height: 13.0625rem;
+      height: 9.0625rem;
       position: relative;
       h1 {
         font-weight: 600;
@@ -107,32 +107,21 @@ export const ServiceContentBox = styled.div`
         margin-bottom: 1.5rem;
         color: var(--col-60);
       }
-      a {
-        text-decoration: none;
-        color: unset;
-        button {
-          display: flex;
-          position: absolute;
-          bottom: 0;
-          align-items: center;
-          justify-content: center;
-          gap: 0.6rem;
+    }
+
+    a {
+      button {
+        align-self: end;
+        .icon {
+          transform: rotate(-45deg);
+          color: var(--col-60);
           transition: all ease 0.5s;
-          cursor: pointer;
+        }
 
+        &:hover {
           .icon {
-            transform: rotate(-45deg);
-            color: var(--col-60);
-            transition: all ease 0.5s;
-          }
-
-          &:hover {
+            transform: none;
             color: var(--col-70);
-            background-color: var(--col-30);
-            .icon {
-              transform: none;
-              color: var(--col-70);
-            }
           }
         }
       }

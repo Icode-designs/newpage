@@ -32,7 +32,7 @@ function FormSubmit() {
 
   return (
     <FormBox
-      action="https://formsubmit.co/17f96291fc40b287f2acdc4eab34e02f"
+      action="https://formsubmit.co/newpagecleaning25@gmail.com"
       method="POST"
       ref={form}
     >

@@ -71,16 +71,9 @@ export const HeroContentBox = styled.div`
         transition: all 0.5s ease;
       }
 
-      &:nth-of-type(1) {
-        button {
-          &:hover {
-            background-color: var(--col-30);
-          }
-        }
-      }
-
       &:nth-of-type(2) {
         button {
+          border-color: var(--col-10);
           &:hover {
             background-color: var(--col-10);
           }

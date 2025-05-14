@@ -5,6 +5,10 @@ export const BookingFormBox = styled.section`
     max-width: 34rem;
     margin: 0 auto;
     margin-top: 3.687rem;
+    label {
+      margin-bottom: 0;
+      text-transform: capitalize;
+    }
 
     button {
       color: var(--col-70);
@@ -50,9 +54,6 @@ export const CheckBoxcontainer = styled.div`
         input {
           width: 1.125rem;
           height: 1.125rem;
-        }
-        label {
-          margin-bottom: 0;
         }
       }
 

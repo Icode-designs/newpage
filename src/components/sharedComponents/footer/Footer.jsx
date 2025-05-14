@@ -61,7 +61,7 @@ function Footer() {
           </ul>
         </div>
         <form
-          action="https://formsubmit.co/17f96291fc40b287f2acdc4eab34e02f"
+          action="https://formsubmit.co/newpagecleaning25@gmail.com"
           method="POST"
           ref={userEmail}
           onSubmit={handleSubmit}
@@ -85,9 +85,7 @@ function Footer() {
             value={value}
             onChange={handleChange}
           />
-          <Button $bg="var(--col-10)" type="submit">
-            send
-          </Button>
+          <Button type="submit">send</Button>
         </form>
       </div>
       <div className="copyright">

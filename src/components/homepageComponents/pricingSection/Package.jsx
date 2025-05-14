@@ -18,7 +18,7 @@ function Package({ data }) {
         })}
       </ul>
       <Link to={`/package/${data.id}`}>
-        <Button $border="1px solid var(--col-60)">Details</Button>
+        <Button variant="secondary">Details</Button>
       </Link>
     </PackageBox>
   );

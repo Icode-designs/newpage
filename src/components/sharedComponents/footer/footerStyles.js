@@ -93,15 +93,6 @@ export const FooterBox = styled.footer`
       }
     }
     button {
-      color: var(--col-70);
-      border: 1px solid transparent;
-      transition: all ease 0.5s;
-      width: fit-content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-self: center;
-
       &:hover {
         border: 1px solid var(--col-10);
         background-color: transparent;

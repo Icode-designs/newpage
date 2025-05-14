@@ -66,7 +66,7 @@ function BookingForm() {
   return (
     <BookingFormBox>
       <form
-        action="https://formsubmit.co/17f96291fc40b287f2acdc4eab34e02f"
+        action="https://formsubmit.co/newpagecleaning25@gmail.com"
         method="POST"
         ref={bookingForm}
         onSubmit={handleSubmit}
@@ -86,9 +86,7 @@ function BookingForm() {
           setSelectedPlan={setSelectedPlan}
         />
 
-        <Button $bg="var(--col-10)" type="submit">
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </BookingFormBox>
   );

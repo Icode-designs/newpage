@@ -15,12 +15,12 @@ function ServiceContent({ data, ...props }) {
         <article>
           <h1>{data.name}</h1>
           <p>{data.desc}</p>
-          <Link to={`/services/${data.id}`}>
-            <Button $border="1px solid var(--col-60)" $btn_Weight="400">
-              Details <FaArrowRightLong className="icon" />
-            </Button>
-          </Link>
         </article>
+        <Link to={`/services/${data.id}`}>
+          <Button variant="secondary">
+            Details <FaArrowRightLong className="icon" />
+          </Button>
+        </Link>
       </div>
     </ServiceContentBox>
   );

@@ -23,26 +23,12 @@ export const Headerbox = styled.header`
       display: none;
     }
 
-    @keyframes slideIn {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(0%);
-      }
-    }
-
-    @keyframes slideOut {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
+    .active-menu {
+      transform: translateX(0%);
     }
 
     menu {
-      display: ${({ $menuOpen }) => ($menuOpen ? "block" : "none")};
+      display: block;
       background-image: url(${hero_bg});
       background-size: cover;
       background-position: center;
@@ -53,8 +39,8 @@ export const Headerbox = styled.header`
       left: 0;
       z-index: 45;
       padding-top: 1.375rem;
-      animation: ${({ $menuOpen }) =>
-        $menuOpen ? "slideIn ease 0.5s" : "slideOut ease 0.5s"};
+      transform: ${({ $menuopen }) => !$menuopen && "translateX(100%)"};
+      transition: all ease 0.5s;
 
       &::before {
         content: "";
@@ -68,30 +54,25 @@ export const Headerbox = styled.header`
         z-index: -1;
       }
 
-      li {
-        padding: 1.375rem 1.5rem;
-        font-size: 1.75rem;
-        font-weight: bold;
-        line-height: auto;
-        letter-spacing: 0;
-        color: var(--col-70);
-        border-bottom: 1px solid var(--col-70) !important;
-      }
-
       a {
-        text-decoration: none;
+        li {
+          padding: 1.375rem 1.5rem;
+          font-size: 1.75rem;
+          font-weight: bold;
+          line-height: auto;
+          letter-spacing: 0;
+          color: var(--col-70);
+          border-bottom: 1px solid var(--col-70);
+
+          &:nth-of-type(5) {
+            border-bottom: none;
+          }
+        }
       }
 
-      > button {
-        margin: 1.375rem;
-        color: var(--col-70);
-        border-radius: 0.375rem;
-        transition: all 0.5s ease;
-
-        &:hover {
-          background-color: var(--col-30);
-          cursor: pointer;
-        }
+      button {
+        margin: 1.5rem;
+        margin-top: 3rem;
       }
     }
 

@@ -27,7 +27,7 @@ function HeroContent() {
           <Button $bg="var(--col-10)">Get Started Now</Button>
         </Link>
         <Link to="/services">
-          <Button $border="1px solid var(--col-10)">View all Services</Button>
+          <Button variant="secondary">View all Services</Button>
         </Link>
       </div>
     </HeroContentBox>

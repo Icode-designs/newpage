@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link, NavLink } from "react-router-dom";
 import Button from "../customButton/Button";
@@ -8,26 +8,35 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import Logo from "../logo/Logo";
 
-function Header({ menuOpen, setMenuOPen }) {
+function Header({ menuOpen, setMenuOpen }) {
   //listen for screen size
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
 
   useEffect(() => {
-    //listen for break point to close menu if open
-    setMenuOPen(false);
+    setMenuOpen(false);
   }, [isLargeScreen]);
 
-  //component variable to change navigation parent container basesed on screen size breakpoints
   const MenuWrapper = isLargeScreen ? "nav" : "menu";
 
+  const timerRef = useRef(null);
+
   function handleClick() {
-    //open and close menu depening on initial state
-    setMenuOPen(!menuOpen);
+    const menuBox = document.getElementsByTagName("menu")[0];
+    if (!isLargeScreen && !menuOpen) {
+      menuBox.classList.add("active-menu");
+      setMenuOpen(!menuOpen);
+    } else if (!isLargeScreen && menuOpen) {
+      menuBox.classList.remove("active-menu");
+      setMenuOpen(!menuOpen);
+    } else {
+      return;
+    }
   }
+
   return (
     <Headerbox $menuOpen={menuOpen}>
       <div>
-        <Logo />
+        <Logo onClick={menuOpen ? handleClick : undefined} />
 
         <MenuWrapper>
           <ul>
@@ -35,21 +44,21 @@ function Header({ menuOpen, setMenuOPen }) {
               to="/"
               end
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              onClick={!isLargeScreen ? handleClick : undefined}
+              onClick={!isLargeScreen && menuOpen ? handleClick : undefined}
             >
               <li>Home</li>
             </NavLink>
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              onClick={!isLargeScreen ? handleClick : undefined}
+              onClick={!isLargeScreen && menuOpen ? handleClick : undefined}
             >
               <li>About us</li>
             </NavLink>
             <NavLink
               to="/services"
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              onClick={!isLargeScreen ? handleClick : undefined}
+              onClick={!isLargeScreen && menuOpen ? handleClick : undefined}
             >
               <li>Services</li>
             </NavLink>
@@ -60,20 +69,14 @@ function Header({ menuOpen, setMenuOPen }) {
             <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              onClick={!isLargeScreen ? handleClick : undefined}
+              onClick={!isLargeScreen && menuOpen ? handleClick : undefined}
             >
               <li>Contact</li>
             </NavLink>
           </ul>
 
           <Link to="/booking">
-            <Button
-              $btn_weight="500"
-              $bg="var(--col-10)"
-              onClick={!isLargeScreen ? handleClick : undefined}
-            >
-              Book us Now!
-            </Button>
+            <Button onClick={handleClick}>Book us Now!</Button>
           </Link>
         </MenuWrapper>
 

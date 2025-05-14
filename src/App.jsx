@@ -15,12 +15,12 @@ import ScrollToTop from "utils/ScrollToTop";
 import { GlobalStyles } from "utils/GlobalStyles";
 
 function App() {
-  const [menuOpen, setMenuOPen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <BrowserRouter>
       <GlobalStyles menuOpen={menuOpen} />
-      <Header menuOpen={menuOpen} setMenuOPen={setMenuOPen} />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
