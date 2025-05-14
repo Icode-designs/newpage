@@ -44,14 +44,6 @@ export const ServiceOverviewBox = styled.section`
       }
 
       button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        background-color: var(--col-10);
-        color: var(--col-70);
-        transition: color ease 0.5s;
-
         .SD-icon {
           transform: rotate(-45deg);
           transition: transform ease 0.5s;

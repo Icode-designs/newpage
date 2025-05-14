@@ -14,7 +14,7 @@ function ServiceOverview({ service }) {
           <h2>{service.name}</h2>
           <p>{service.moreDesc}</p>
           <Link to="/booking">
-            <Button $bg="var(--col-10)" $btn_Weight="400">
+            <Button variant="secondary">
               Book Now <FaArrowRightLong className="SD-icon" />
             </Button>
           </Link>
