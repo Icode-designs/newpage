@@ -61,7 +61,7 @@ function Footer() {
           </ul>
         </div>
         <form
-          action="https://formsubmit.co/newpagecleaning25@gmail.com"
+          action="https://formsubmit.co/newpagecleaningservice.llc@gmail.com"
           method="POST"
           ref={userEmail}
           onSubmit={handleSubmit}
