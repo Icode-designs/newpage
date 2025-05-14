@@ -66,7 +66,7 @@ function BookingForm() {
   return (
     <BookingFormBox>
       <form
-        action="https://formsubmit.co/newpagecleaningservice.llc@gmail.com"
+        action="https://formsubmit.co/2df93c0a988c718aa50da1e583d75ed2"
         method="POST"
         ref={bookingForm}
         onSubmit={handleSubmit}
