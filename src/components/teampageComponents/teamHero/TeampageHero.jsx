@@ -7,7 +7,9 @@ function TeampageHero() {
     <TeamHeroBox>
       <div>
         <article>
-          <BigHeading text="Effective Cleaning Requires an Expert Cleaning Team" />
+          <BigHeading>
+            Effective Cleaning Requires an Expert Cleaning Team
+          </BigHeading>
           <p>
             Dedicated to Delivering Spotless Spaces with Customized Cleaning
             Solutions

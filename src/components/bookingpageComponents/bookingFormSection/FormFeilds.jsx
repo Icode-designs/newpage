@@ -7,6 +7,7 @@ import { fieldNames } from "./bookingFormData";
 import { FormFeildContainer } from "./bookingFormStyles";
 
 function FormFields({ formEntry, setFormEntry }) {
+  //Todo: creat a feild map to store values used for setting id, name and value
   const fieldMap = {
     "Full Name": "name",
     "Email Address": "email",
@@ -18,6 +19,7 @@ function FormFields({ formEntry, setFormEntry }) {
   };
 
   function handleChange(e) {
+    //Todo: use the onChange event to update input feilds whilst storing input for form validation
     const { name, value } = e.target;
     setFormEntry((prev) => ({
       ...prev,
@@ -28,6 +30,7 @@ function FormFields({ formEntry, setFormEntry }) {
   return (
     <FormFeildContainer>
       {fieldNames.map((label, index) => {
+        //Todo: set a vailrable "feildKey" for each input feild to dynamically set name, id, and value for each form feild
         const fieldKey = fieldMap[label];
 
         if (!fieldKey) return null;
@@ -46,7 +49,7 @@ function FormFields({ formEntry, setFormEntry }) {
               />
             ) : (
               <input
-                type={fieldKey === "contactNumber" ? "tel" : "text"}
+                type={fieldKey === "contactNumber" ? "tel" : "text"} //sets type to tel if feildkey === contactNumber else sets type to text
                 placeholder={label}
                 id={fieldKey}
                 name={fieldKey}

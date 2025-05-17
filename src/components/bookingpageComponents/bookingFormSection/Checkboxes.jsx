@@ -21,6 +21,7 @@ function Checkboxes({
   };
 
   const handlePlanChange = (e) => {
+    //todo sets the selected plan
     setSelectedPlan(e.target.value);
   };
 
@@ -54,7 +55,7 @@ function Checkboxes({
                 id={data.id}
                 name="package"
                 value={data.name}
-                checked={selectedPlan === data.name}
+                checked={selectedPlan === data.name} //tracks which plan is selected and deselects others
                 onChange={handlePlanChange}
               />
               <label htmlFor={data.id}>{data.name}</label>
