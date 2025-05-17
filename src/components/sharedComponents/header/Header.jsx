@@ -62,9 +62,9 @@ function Header({ menuOpen, setMenuOpen }) {
             >
               <li>Services</li>
             </NavLink>
-            <NavLink to="https://newpagecleaningservice.blogspot.com/">
+            {/* <NavLink to="https://newpagecleaningservice.blogspot.com/">
               <li>Blog</li>
-            </NavLink>
+            </NavLink> */}
 
             <NavLink
               to="/contact"

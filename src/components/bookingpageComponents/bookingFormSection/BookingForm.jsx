@@ -9,7 +9,10 @@ import FormFeilds from "./FormFeilds";
 import { BookingFormBox } from "./bookingFormStyles";
 
 function BookingForm() {
+  //Todo: set form ref to manually reset and submit form
   const bookingForm = useRef();
+
+  //Todo: set form state to manage entry validation
   const [formEntry, setFormEntry] = useState({
     name: "",
     email: "",
@@ -20,6 +23,7 @@ function BookingForm() {
     message: "",
   });
 
+  //Todo: set checkbox state to manage entry validation
   const [checkedServices, setCheckedServices] = useState({
     houseCleaning: false,
     schoolCleaning: false,
