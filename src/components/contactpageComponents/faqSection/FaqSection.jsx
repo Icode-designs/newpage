@@ -27,7 +27,7 @@ function FaqSection() {
 
   const articleDetails = {
     heading: "Frequently asked questions",
-    desc: "We provide comprehensive cleaning services tailored to your needs. From residential cleaning  services",
+    desc: "We provide comprehensive cleaning services tailored to your needs. From residential cleaning  services to cleaning schools and industrial spaces.",
   };
 
   const customStyles = {
