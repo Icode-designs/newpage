@@ -18,9 +18,9 @@ const buttonType = {
     border: 1px solid var(--col-60);
 
     &:hover {
-      background-color: var(--col-10);
+      background-color: var(--col-30);
       color: var(--col-70);
-      border: 1px solid var(--col-10);
+      border: 1px solid var(--col-30);
     }
   `,
 };

@@ -19,7 +19,7 @@ function AboutHeroArticle() {
 
       <ButtonContainer>
         <NavLink to="/booking">
-          <Button>Get Started Now</Button>
+          <Button variant="primary">Get Started Now</Button>
         </NavLink>
         <NavLink to="/services">
           <Button variant="secondary">View all Services</Button>

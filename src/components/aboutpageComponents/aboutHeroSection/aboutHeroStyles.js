@@ -80,28 +80,6 @@ export const ButtonContainer = styled.div`
     button {
       min-width: max-content;
     }
-    &:nth-of-type(1) {
-      button {
-        color: var(--col-70);
-        transition: all ease 0.5s;
-
-        &:hover {
-          background-color: var(--col-30);
-        }
-      }
-    }
-
-    &:nth-of-type(2) {
-      button {
-        color: var(--col-40);
-        transition: all ease 0.5s;
-
-        &:hover {
-          background-color: var(--col-30);
-          color: var(--col-70);
-        }
-      }
-    }
   }
 
   @media (min-width: 768px) {
